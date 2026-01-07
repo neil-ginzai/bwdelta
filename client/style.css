@@ -114,6 +114,18 @@ img{
     height: 250px;
     background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), rgba(0,0,0,0) 70%);
 }
+#logotopbar{
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    right: -50px;
+    top: 0px;
+    transform: translate(30%);
+    width: 250px;
+    height: 95px;
+    background-size: 100%;
+    background-image: url(./img/logo_login.png);
+}
 #divider{
     left: 50%;
     transform: translateX(-50%);
