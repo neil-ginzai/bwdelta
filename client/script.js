@@ -2033,6 +2033,7 @@ async function clipboard(text) {
                 : $("nickname").value;
         document.cookie = compileCookie(settings);
         $("login_card").style.display = "none";
+        $("welcome").style.display = "none";
         $("loading").style.display = "block";
     }
 
@@ -2123,6 +2124,7 @@ async function clipboard(text) {
             );
         }
         $("loading").style.display = "none";
+        $("welcome").style.display = "block";
         $("login_card").style.display = "block";
         socket.on("login", setup);
         if (settings.autojoin)
@@ -2194,6 +2196,7 @@ async function clipboard(text) {
         $("login_error").style.display = "block";
         $("login_card").style.display = "block";
         $("loading").style.display = "none";
+        $("welcome").style.display = "block";
     });
     socket.on("ban", (data) => {
         error_id = "error_ban";
