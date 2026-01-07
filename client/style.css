@@ -570,7 +570,7 @@ span .bubble_text{
 
 /*Mobile Stylesheet*/
 @media screen and (max-width: 560px){
-    #top_bar, #bottom_bar, #divider{
+    #top_bar, #logotopbar, #bottom_bar, #divider{
         display: none;
     }
     #blur{
