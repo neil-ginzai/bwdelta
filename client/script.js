@@ -489,7 +489,7 @@ async function clipboard(text) {
                 `
                 <datalist id="themes">
                     <option value="5270">
-                    <option value="5112">
+                    <option value="purple">
                     <option value="5259">
                     <option value="5060">
                     <option value="dceglass">
@@ -507,7 +507,7 @@ async function clipboard(text) {
                 <tr><td>Name:</td><td><input id="autojoin_name" placeholder="name" value="${settings.name}"></td></tr>
                 <tr><td>Color:</td><td><input id="color_name" value='${settings.color}'></td></tr>
                 <tr><td>Background (URL):</td><td><input id='bgName' value='${settings.bg}'></td></tr>
-                <tr><td>Theme (URL):</td><td><input id="theme_name" placeholder="theme URL or name" list="themes" value="5112"></td></tr>
+                <tr><td>Theme (URL):</td><td><input id="theme_name" placeholder="theme URL or name" list="themes" value="purple"></td></tr>
                 <tr><td>Disable Crosscolors:</td><td><input type="checkbox" id="disCC" ${settings.disableCCs ? "Checked" : ""}></td></tr>
                 <tr><td>Enable Autojoin:</td><td><input type="checkbox" id="autojoin" ${settings.autojoin ? "Checked" : ""}></td></tr>
                 </table>
@@ -2078,7 +2078,7 @@ async function clipboard(text) {
         $("bonzicanvas").height = innerHeight;
         stage = new createjs.StageGL($("bonzicanvas"), { transparent: true });
         if (settings.bg == undefined) settings.bg = "";
-        if (settings.theme == undefined) settings.theme = "./themes/5112.css";
+        if (settings.theme == undefined) settings.theme = "./themes/purple.css";
         if (settings.disableCCs == undefined) settings.disableCCs = false;
         if (settings.autojoin == undefined) settings.autojoin = false;
         if (settings.color == undefined) settings.color = "";
@@ -2328,7 +2328,7 @@ async function clipboard(text) {
     }
 
     function changeSettings(crosscolors, bg, autojoin, name, theme, color) {
-        var colorse = ["red", "green", "blue", "5259", "5270", "5112", "5060", "dceglass", "dcemetal", "black", "windowsxp", ];
+        var colorse = ["red", "green", "blue", "5259", "5270", "purple", "5060", "dceglass", "dcemetal", "black", "windowsxp", ];
         if (colorse.includes(theme)) theme = "/themes/" + theme + ".css";
 
         //This function will do stuff soon!
