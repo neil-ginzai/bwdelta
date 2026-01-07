@@ -57,7 +57,7 @@ body{
     z-index: -30;
 }
 
-#top_bar, #bottom_bar, #blur, #divider, #login_card, #readme_block, #login img, #loading{
+#top_bar, #bottom_bar, #blur, #divider, #login_card, #readme_block, #login img, #welcome, #loading{
     position: absolute;
 }
 
@@ -221,7 +221,7 @@ img{
     margin-top: 8px;
     box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.4);
 }
-#loading{
+#loading, #welcome{
     top: 50%;
     left: 50%;
     transform: translateX(20px);
@@ -231,6 +231,10 @@ img{
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     color: white;
+}
+
+#welcome{
+    transform: translateX(-170px);
 }
 
 #readme_block{
