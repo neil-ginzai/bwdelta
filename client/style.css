@@ -236,6 +236,7 @@ img{
 #loading, #welcome{
     top: 50%;
     left: 50%;
+    margin-top: -20px;
     transform: translateX(20px);
     font-weight: bold;
     font-style: italic;
