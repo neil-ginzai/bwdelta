@@ -1,0 +1,51 @@
+#login{
+    background-color: #8b5adc;
+}
+
+#top_bar, #bottom_bar{
+    background-color: #37009C;
+}
+#top_bar div{
+    background: linear-gradient(to right, #340399, rgba(255, 255, 255, 0.85) 25%, rgba(0,0,0,0));
+}
+#bottom_bar{
+    background: linear-gradient(to right, #8934AE, #37009C);
+}
+#bottom_bar div{
+    background: linear-gradient(to right, #340399, #D9F638 25%, rgba(0,0,0,0));
+}
+
+#card_login{
+    background: linear-gradient(to right, #4A00A9 0% 30%, #8b5adc);
+}
+
+#readme_block{
+    color: #444444;
+}
+
+#content{
+    background-color: #452066;
+}
+
+/*CHATBAR*/
+#chatbar_cont{
+    background-color: #442D7E;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #7050C0, rgba(0,0,0,0) 20% 100%), linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(255, 255, 255, 0.05));
+}
+
+#chatbar{
+    position: absolute;
+    top: 3px;
+    font-size: 15px;
+    width: calc(100% - 132px);
+}
+#tile{
+    background-image: url(/img/tile.png), linear-gradient(to right, #5e4899 7%, rgba(0,0,0,0) 12% 88%), linear-gradient(to bottom, #5e4899 7%, rgba(0,0,0,0) 12% 88%, #5e4899 93% 100%);
+    background-color: #452E81;
+}
+
+
+
+#log_cont, .msWindow_cont{
+    background-color: #6d3399;
+}
