@@ -260,6 +260,14 @@ img{
     text-shadow: 0px 0px 0px transparent;
     transform: translateX(30px) translateY(-4px);
 }
+#loa1{
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0px;
+    text-shadow: 0px 0px 0px transparent;
+    transform: translateX(95px) translateY(-4px);
+}
 
 #readme_block{
     left: 50%;
