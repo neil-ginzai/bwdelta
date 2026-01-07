@@ -2,144 +2,10 @@
     font-family: "Tahoma";
     src: url("./Tahoma.woff");
 }
-
-@font-face{
-    font-family: "Comic Sans MS";
-    src: url("./comic.ttf");
-}
-
 @font-face{
     font-family: "XP_Tahoma";
     src: url("./windows-xp-tahoma.woff");
 }
-
-@font-face {
-    font-family: Segoe7;
-    src: url("https://files.catbox.moe/7yqelg.ttf");
-}
-
-@keyframes move {
-    from {
-        background-position-x: 500px;
-    }
-    to {
-        background-position-x: 0;
-    }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg); /* Start at 0 degrees */
-  }
-  to {
-    transform: rotate(360deg); /* End at 360 degrees (one full turn) */
-  }
-}
-
-.spin{
-    animation: spin 2s linear infinite;
-    display: inline-block;
-}
-
-.bgay-rainbow {
-    background-image: linear-gradient(120deg in hsl longer hue, red, red, red);
-    background-size: 500px;
-    background-clip: text;
-    display: inline-block;
-    color: transparent;
-    animation: move 2s linear infinite;
-}
-
-.code {
-    border: 1px solid #bbb;
-    background-color: #ddd;
-    border-radius: 4px;
-    font: monospace;
-    padding: 0 0.2em;
-}
-
-.spoiler {
-    background-color: darkslategrey;
-    border-radius: 3px;
-    color: transparent;
-    user-select: none;
-    transition: background-color 0.2s, color 0.2s;
-    cursor: pointer;
-}
-
-.spoiler:hover {
-    background-color: #777;
-}
-
-.spoiler.reveal {
-    background-color: #5555;
-    color: black;
-    user-select: all;
-    cursor: auto;
-}
-
-.spoiler:not(.reveal) gay-rainbow {
-    background: none;
-}
-
-.explosion {
-    width: 71px;
-    height: 101px;
-    position: fixed;
-    background: url("./img/misc/explosion.png");
-    animation: 1s explosion steps(17) 1 forwards;
-    transform: translate(65px, 30px) scale(2);
-    image-rendering: pixelated;
-    pointer-events: none;
-    z-index: 9998;
-}
-
-@keyframes explosion {
-    100% { background-position: -1207px; }
-}
-
-.fliph{
-    display: inline-block; /* Required for the transform to apply correctly */
-    transform: scaleX(-1);
-}
-
-.comicsans{
-    font-family: "Comic Sans MS";
-}
-.raging{
-    display: inline-block; /* Required for the transform to apply correctly */
-    animation: shaking 0.6s infinite ease-in-out;
-    color: red;
-}
-
-.invis{
-    display: inline-block; /* Required for the transform to apply correctly */
-    color: transparent;
-}
-
-.quake{
-    display: inline-block; /* Required for the transform to apply correctly */
-    animation: shaking 0.6s infinite ease-in-out;
-}
-
-.flipv{
-    display: inline-block; /* Required for the transform to apply correctly */
-    transform: scaleY(-1);
-}
-
-@keyframes shaking {
-      0%   { transform: translate(-5px, 5px) rotate(-1deg); }
-      10%  { transform: translate(5px, -5px) rotate(0deg); }
-      20%  { transform: translate(-5px, 5px) rotate(-2deg); }
-      30%  { transform: translate(5px, -5px) rotate(5deg); }
-      40%  { transform: translate(-5px, 5px) rotate(-4deg); }
-      50%  { transform: translate(5px, -5px) rotate(3deg); }
-      60%  { transform: translate(-5px, 5px) rotate(-1deg); }
-      70%  { transform: translate(5px, -5px) rotate(0deg); }
-      80%  { transform: translate(-5px, 5px) rotate(0deg); }
-      90%  { transform: translate(5px, -5px) rotate(10deg); }
-      100% { transform: translate(-5px, 5px) rotate(-5deg); }
-    }
 
 @keyframes rainbow{
     0%{color: red;}
@@ -152,26 +18,12 @@
     100%{color: red;}
 }
 
-@keyframes rainbowreadme {
-  from{filter:hue-rotate(0deg)}
-  to{filter:hue-rotate(360deg)}
-}
-
-@keyframes redyellow{
-    0%{color: red;}
-    20%{color: orange;}
-    40%{color: yellow;}
-    60%{color: yellow;}
-    80%{color: orange;}
-    100%{color: red;}
-}
-
 .applets_item {
     display:flex;flex-direction:column;gap:5px;
 }
 
 *{
-    font-family: "Segoe7", "Tahoma";
+    font-family: "Tahoma";
 }
 img{
     -webkit-user-drag: none;
@@ -180,20 +32,6 @@ body{
     margin: 0;
     overscroll-behavior: none;
 }
-
-a:link {
-  color: #2b56b4; /* Blue for unvisited links */
-  text-decoration: none; /* Removes the default underline */
-}
-
-a:active {
-  color: #00ffff; /* Red when the link is active/clicked */
-}
-
-a:visited {
-  color: #8e2bb4; /* Blue for unvisited links */
-}
-
 #banner {
     background: rgb(182,108,254);
     background: linear-gradient(0deg, rgba(182,108,254,1) 0%, rgba(140,51,226,1) 19%, rgba(122,37,193,1) 44%, rgba(113,34,175,1) 84%, rgba(140,62,201,1) 93%, rgba(188,103,255,1) 100%); 
@@ -271,12 +109,6 @@ img{
 
 
 #blur{
-    top: 100px;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), rgba(0,0,0,0) 70%);
-}
-#logologinonbg{
     top: 100px;
     width: 250px;
     height: 250px;
@@ -360,8 +192,7 @@ img{
     padding:30px;
     overflow-x:scroll;
     gap:20px;
-    background-color:rgba(50,50,205,0);
-    background-image: linear-gradient(90deg, #7a00b3, #b251c2, #7a00b3);
+    background-color:rgba(50,50,205,0.3);
     border-radius:3px;
 }
 #appletslogo {
@@ -382,26 +213,23 @@ img{
 #login_error{
     position: absolute;
     display: none;
-    background-color: #ffffff00;
+    background-color: white;
     border-radius: 3px;
-    color: white;
-    padding: 0px 0px;
-    width: 400px;
-    text-align: center;
-    font-size: 13px;
-    margin-top: 5px;
-    margin-left: -201px;
-    box-shadow: 1px 1px 2px 1px rgb(0 0 0 / 0%);
+    color: red;
+    padding: 8px;
+    font-size: 12px;
+    margin-top: 8px;
+    box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.4);
 }
 #loading{
     top: 50%;
     left: 50%;
-    transform: translate(-140px, -120px);
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-    letter-spacing: 0px;
-    text-shadow: 0px 0px 1px rgba(0,0,0,0.6);
+    transform: translateX(20px);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 35px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
     color: white;
 }
 
@@ -434,9 +262,8 @@ The Main UI is much simpler
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: black;
-    background-image: url("/img/assets/fiveoneonetwowlp.png"); /* /img/assets/fiveoneonetwowlp.png */
-    background-size: cover;
+    background-color: #452066;
+    background-image: url(./img/desktop_logo.png), url(./img/desktop_bg.png);
     background-position: top left, center;
     background-repeat: no-repeat;
 }
@@ -449,9 +276,8 @@ The Main UI is much simpler
     height: 32px;
     bottom: 0;
     z-index: 2;
-    background-color: #000000;
-    background-image: url("/themes/5259taskbar.png");
-    background-size: 100% 100%;
+    background-color: #442D7E;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #7050C0, rgba(0,0,0,0) 20% 100%), linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(255, 255, 255, 0.05));
 }
 #talkcard{
     font-size: 14px;
@@ -509,11 +335,11 @@ The Main UI is much simpler
     top: 0px;
     width: 27px;
     height: 30px;
-    background-image: url(./img/tile.png);
+    background-image: url(./img/tile.png), linear-gradient(to right, #5e4899 7%, rgba(0,0,0,0) 12% 88%), linear-gradient(to bottom, #5e4899 7%, rgba(0,0,0,0) 12% 88%, #5e4899 93% 100%);
     background-position: center;
     background-repeat: no-repeat;
-    background-color: transparent;
-    border: 1px solid rgba(0,0,0,0);
+    background-color: #452E81;
+    border: 1px solid rgba(0,0,0,0.7);
 }
 
 /*AGENTS*/
@@ -750,18 +576,12 @@ span .bubble_text{
 
 /*Message Logger*/
 #log_cont, .msWindow_cont{
-    backdrop-filter: blur(4px);
     position: absolute;
-    border: 0.1px solid #0000005e;
     box-sizing: border-box;
-    background: url("/themes/reflections.png"), linear-gradient(90deg, #ffffff8f, #00000008, #ffffff57), #f5d8ff8c; /* #d8efff8c */
-    background-size: cover;
-    box-shadow: inset -1px -1px 0px 0px #ff00e2, inset 0.1px 0.1px 1px 1px rgb(255 255 255 / 20%), 0px 0px 15px #000000;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 28px, rgba(0,0,0,0.25) 31px, rgba(0,0,0,0) 31px), linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0,0,0,0) 5px), linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.1) 31px), linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(255, 255, 255, 0.05) 31px, rgba(0,0,0,0) 31.2px), linear-gradient(180deg, #6d3399 0px, #6d3399 32px, rgba(0,0,0,0) 32px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), #6d3399;
+    border: 1px solid #582a7a;
     padding: 0px 5px 5px 5px;
     border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
     z-index: 1;
 }
 #log_cont{
@@ -782,10 +602,11 @@ span .bubble_text{
 }
 
 #log_title, .msWindow_title{
-    margin: 4px 0px 4px 4px;
-    color: #002045;
-    font-size: 12px;
-    text-shadow: 0px 0px 8px rgb(255 255 255), 0px 0px 8px rgb(255 255 255), 0px 0px 8px rgb(255 255 255), 0px 0px 8px rgb(255 255 255), 0px 0px 8px rgb(255 255 255);
+    margin: 6px 0px 6px 4px;
+    color: white;
+    font-size: 16px;
+    text-shadow: 1.5px 1.5px rgba(0,0,0,0.3);
+    white-space: nowrap;
 }
 
 #log_body, .msWindow_body{
@@ -812,20 +633,13 @@ span .bubble_text{
   clear: left;
   font-size: 13px;
   padding: 2px 15px;
-  color: #222;
-  background: linear-gradient(#f2f2f2 45%, #ebebeb 45%, #cfcfcf);
-  border: 1px solid #8e8f8f;
-  box-shadow: inset 0 0 0 1px #fffc;
-  outline: 0px solid rgb(0 0 0 / 0%);
-  border-radius: 3px;
-}
-.msBtn:hover{
-  border: 1px solid #9560b0;
-  background: linear-gradient(#fceafd 45%, #f1befd 0, #e3a7f5);
+  background-color: #F5F5F5;
+  border: 2px outset #F5F5F5;
+  outline: 1px solid rgba(0,0,0,0.7);
+  border-radius: 0px;
 }
 .msBtn:active{
-  border: 1px solid #9560b0;
-  background: linear-gradient(#f7e5fc, #e7c4f6 30% 50%, #d998ef 50%, #c068db);
+  border-style: inset;
 }
 #log_body::-webkit-scrollbar, .msWindow_body::-webkit-scrollbar{
     display: none;
@@ -836,7 +650,7 @@ span .bubble_text{
 }
 .rainb {
     color:red;
-    animation: rainbowreadme 1s linear infinite;
+    animation: rainbowtxt 1s linear infinite;
 }
 #log_body p{
     margin: 0;
@@ -844,27 +658,21 @@ span .bubble_text{
 }
 .log_close{
     position: relative;
-    border: 1px rgb(0 0 0 / 70%);
-    box-shadow: inset 0 0 0 1px #51515180;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgBlZFNCoQwDIVbmRvOMHOAAd0K/uDGlYKiCG4VPICi9yu0oCSQoFUXFtKEl6+voZXvr7sKay1TL690FOexY+Hz87i2decOuDKQsNGVe8AGYTRJIh0Y+orBvxszCPllOymlxN06jNE26Qnwg4zdHQLrMhFaawwAqAadDPE1ijwUxhiMKCmxCZk06OMYTz5lAx3xWDeXkLNAAAAAAElFTkSuQmCC) no-repeat 50%, linear-gradient(hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, .3) 45%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, .1) 75%, hsla(0, 0%, 100%, .5)), radial-gradient(circle at -60% 50%, #0007 5% 10%, #0000 50%), radial-gradient(circle at 160% 50%, #0007 5% 10%, #0000 50%), linear-gradient(#e0e097e5, #cfbd6a 25% 50%, #d5c236 50%);
-    width: 40px;
-    height: 16px;
-    left: -2;
-    top: -5;
-    font-size: 18px;
+    border: none;
+    background-image: url("./img/assets/xpbutton.webp");
+    background-size: 100%;
+    width: 22px;
+    height: 22px;
+    font-size: 19px;
+    top: -2px;
     padding: 0;
-    color: #ffffff00;
-    border-radius: 0px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    color: white;
+    border-radius: 3px;
     float: right;
     margin-left: 5px;
-    cursor:pointer;
-    transition: background-image 0.2s ease-out;
 }
 .log_close:hover{
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACUSURBVHgBlZFNCoQwDIVbmRvOMHOAAd0K/uDGlYKiCG4VPICi9yu0oCSQoFUXFtKEl6+voZXvr7sKay1TL690FOexY+Hz87i2decOuDKQsNGVe8AGYTRJIh0Y+orBvxszCPllOymlxN06jNE26Qnwg4zdHQLrMhFaawwAqAadDPE1ijwUxhiMKCmxCZk06OMYTz5lAx3xWDeXkLNAAAAAAElFTkSuQmCC) no-repeat 50%, linear-gradient(hsla(0, 0%, 100%, .5), hsla(0, 0%, 100%, .3) 45%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, .1) 75%, hsla(0, 0%, 100%, .5)), radial-gradient(circle at -60% 50%, #0007 5% 10%, #0000 50%), radial-gradient(circle at 160% 50%, #0007 5% 10%, #0000 50%), linear-gradient(#f7f7a7e5, #e8ec79 25% 50%, #ffe841 50%);
-    box-shadow: inset 0 0 0 1px #51515180, 0px 0px 10px #fff1b6, 0px 0px 10px #fff1b6;
+  background-position: 100%;
 }
 .log_close i{
     margin: 0;
@@ -883,14 +691,13 @@ span .bubble_text{
     display:flex;
     flex-direction:column;
     align-items: center;
-    text-align: center;
     z-index:999;
     justify-content: center;
     text-shadow: 1px 1px black;
 }
 .icon img{
-    width:65px;
-    height:65px;
+    width:45px;
+    height:45px;
 }
 
 /*POLL CSS*/
@@ -922,13 +729,6 @@ span .bubble_text{
 #innerbar_no{
     background-color: red;
 }
-#readme_block a{
-color:#ffffff;
-transition: 0.1s;
-}
-#readme_block a:hover{
-color:#bdbdbd;
-}
 .polltx{
   position: absolute;
   top: 50%;
@@ -936,9 +736,4 @@ color:#bdbdbd;
   transform: translate(-50%, -50%);
   font-size: 20px;
   color: rgba(0,0,0,0.7);
-}
-.hat-overlay {
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
