@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <style>
+            body{
+                color: white;
+                background-color: black;
+                font-family: sans-serif;
+            }
+            table{
+                border-collapse: collapse;
+                font-size: 22px;
+                min-width: 30%;
+            }
+            td, th{
+                padding: 5px 10px;
+                text-align: center;
+            }
+            tr{
+                background-color: #333333;
+            }
+            tr:nth-child(odd){
+                background-color: #222222;
+            }
+            tr:hover{
+                background-color: #555555;
+            }
+
+            input{
+                font-size: 20px;
+                border: none;
+                padding: 5px 10px;
+                background-color: #333333;
+                color: white;
+                outline: none;
+            }
+            input[type="submit"]{
+                background-color: #555555;
+            }
+            input[type="submit"]:hover{
+                background-color: #777777;
+            }
+        </style>
+        <script>
+            let kingword = null;
+            let viewing = null;
+            let requestor;
+            function $(id){return document.getElementById(id)};
+            function view(room){
+                viewing = room;
+                kingword = null;
+                started = true;
+                $("roomMenu").style.display = "none";
+                req();
+                requestor = setInterval(req, 3000);
+            }
+            function minsToTime(mins){
+                let hrs = Math.floor(mins/60);
+                let days = Math.floor(hrs/24);
+                hrs%=24;
+                mins%=60;
+                return (days>0 ? days+" Days " : '') + (hrs>0 ? hrs+" Hours " : '') + mins+" Minutes";
+            }
+            function kingView(word){
+                kingword = word;
+                viewing = null;
+                $("roomMenu").style.display = "none";
+                req();
+                requestor = setInterval(req, 3000);
+            }
+            function req(){
+                try{
+                let request = new XMLHttpRequest();
+                request.open("GET", "https://bonziworld.org/stats?"+(viewing == null ? "auth="+kingword : "room="+viewing));
+                request.send();
+                request.onreadystatechange = r=>{
+                    console.log("m")
+                    if(request.readyState == 4){
+                        let response = JSON.parse(request.responseText);
+                        if(response.error == true){
+                            alert("ERROR OCCURRED");
+                            ret();
+                        }
+                        //Parse room
+                        else if(response.rooms == undefined){
+                            $("roomData").style.display = "block";
+                            $("roomName").innerHTML = viewing;
+                            $("memcount").innerHTML = response.members;
+                            $("ownername").innerHTML = response.owner.guid == undefined ? "NONE" : response.owner.name+"#"+parseInt(response.owner.guid).toString(36).toUpperCase();
+                            $("uptime").innerHTML = minsToTime(response.uptime);
+                        }
+                        else{
+                            try{
+                            $("kingData").style.display = "block";
+                            $("roomcount").innerHTML = Object.keys(response.rooms).length
+                            $("serverUptime").innerHTML = minsToTime(response.server.uptime);
+                            let members = 0;
+                            let msgs = 0;
+                            let logins = 0;
+                            let cmds = 0;
+                            $("roomListTable").innerHTML = "<tr><th>Room Name</th><th>Member Count</th><th>Owner</th><th>Uptime</th>";
+                            for(let i = 0, roomlist = Object.keys(response.rooms); i<roomlist.length; i++){
+                                $("roomListTable").innerHTML += `<tr><td>${roomlist[i]}</td><td>${response.rooms[roomlist[i]].members}</td><td>${response.rooms[roomlist[i]].owner.id == 0 ? "NONE" : response.rooms[roomlist[i]].owner.name+"#"+parseInt(response.rooms[roomlist[i]].owner.guid).toString(36).toUpperCase()}</td><td>${minsToTime(response.rooms[roomlist[i]].uptime)}</td></tr>`;
+                                members+=response.rooms[roomlist[i]].members;
+                                msgs+=response.rooms[roomlist[i]].messages;
+                                logins+=response.rooms[roomlist[i]].logins;
+                                cmds+=response.rooms[roomlist[i]].commands;
+                            }
+                            $("serverMembersTotal").innerHTML = members;
+                            $("serverLoginsTotal").innerHTML = logins;
+                            $("serverMessagesTotal").innerHTML = msgs;
+                            }catch(exc){
+                                alert(exc)
+                            }
+                        }
+                    }
+                }
+                }catch(exc){
+                    alert(exc)
+                }
+            }
+
+            function ret(){
+                clearInterval(requestor);
+                $("roomMenu").style.display = "block";
+                $("roomData").style.display = "none";
+                $("kingData").style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>BonziWORLD Statistic Viewer</h1>
+            <div id="roomMenu">
+                <h2>Public Rooms</h2>
+                <table>
+                    <tr><th>Room Name</th></tr>
+                    <tr onclick="view('default')"><td>default</td></tr>
+                    <tr onclick="view('desanitize')"><td>desanitize</td></tr>
+                </table>
+                <form action="javascript:view($('custRoom').value)">
+                    <h3>View custom room</h3>
+                    <input id="custRoom"><input type="submit" value="view">
+                </form>
+                <div id="extraDataForm">
+                    <h2>Extra Data</h2>
+                    <p>To view extra data, enter your kingword.</p>
+                    <form action="javascript:kingView($('kingword').value)">
+                        <input id="kingword" type="password"><input type="submit" value="view">
+                    </form>
+                </div>
+            </div>
+            <div id="kingData" style="display: none">
+                <table id="serverTable">
+                    <tr><th colspan="2">Server Data</th></tr>
+                    <tr><td>Rooms</td><td id="roomcount">UNKNOWN</td></tr>
+                    <tr><td>Members</td><td id="serverMembersTotal">UNKNOWN</td></tr>
+                    <tr><td>Messages</td><td id="serverMessagesTotal">UNKNOWN</td></tr>
+                    <tr><td>Logins</td><td id="serverLoginsTotal">UNKNOWN</td></tr>
+                    <tr><td>Uptime</td><td id="serverUptime">UNKNOWN</td></tr>
+                    <tr><td colspan="2" onclick="ret()">Return</td></tr>
+                </table><br>
+                <table id="roomListTable">
+                </table>
+            </div>
+            <div id="roomData" style="display: none">
+                <table id="roomTable">
+                    <tr><th id="roomName" colspan="2">ROOMNAME</th></tr>
+                    <tr><td>Members</td><td id="memcount">UNKNOWN</td></tr>
+                    <tr><td>Owner</td><td id="ownername">UNKNOWN</td></tr>
+                    <tr><td>Uptime</td><td id="uptime">UNKNOWN</td></tr>
+                    <tr><td colspan="2" onclick="ret()">Return</td></tr>
+                </table>
+            </div>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+
+<!-- saved from url=(0029)https://place.bonziworld.org/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>FunyPlace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=0">
+    <meta name="description" content="A fun r/place clone where you can build anything you can imagine! Let your imagination run wild!">
+    <link rel="icon" type="image/png" href="https://place.bonziworld.org/favicon.png">
+    <script src="./FunyPlace_files/script.js"></script>
+    <style>
+        *{
+            user-select: none;
+            touch-action: none;
+        }
+        body{
+            margin:0px;
+            background-color:#202020;
+            border: 1px solid black;
+            color: white;
+            font-family: arial;
+            overscroll-behavior: none;
+        }
+        #place{
+            position:fixed;
+            background-color:white;
+            transform-origin: 0 0;
+            image-rendering: pixelated;
+        }
+        #colorsel{
+            position: fixed;
+            bottom: 0;
+            left:0;
+            margin: none;
+            width: 100%;
+            background-color:white;
+            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+            line-height: 0;
+        }
+        .coloropt{
+            width:50px;
+            height:35px;
+            border: 2px solid #D8D8D8;
+            margin: 4px 3px 4px 3px;
+            display: inline-block;
+        }
+        .selected{
+            border: 2px solid black;
+        }
+        .coloropt:active{
+            background-color:white;
+            border: 2px solid black;
+        }
+        #lock, #coords{
+            position: fixed;
+            top: 0;
+            display: none;
+            padding: 5px 10px;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            font-weight: bold;
+        }
+        #lock{
+            left: 0;
+        }
+        #coords{
+            right: 0;
+        }
+        #error, #lockdown{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: none;
+        }
+        #error_content, #welcome, #lockdown_content{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 5px 20px;
+            background-color: black;
+            color: white;
+            font-size: 17px;
+        }
+        #welcome{
+            min-width: 50%;
+            display: none;
+        }
+        #welcome button{
+            background-color: #222222;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 20px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #welcome button:hover{
+            color: black;
+            background-color: white;
+        }
+        #welcome h2{
+            margin-bottom: 5px;
+        }
+        #error_content h1{
+            font-size: 30px;
+        }
+        a{
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="place" style="left: -913.443px; top: -665.148px; transform: scale(1.94872);" width="1600" height="1600"></canvas>
+    <div id="lock">LOCKED</div>
+    <div id="coords" style="display: inline-block;">x: 445 y: 224</div>
+    <div id="welcome">
+        <center>
+            <h1>Welcome to FunyPlace!</h1>
+            A simple r/place clone. There are no rules, have fun.
+            <h2><u>Controls</u></h2>
+            <li><b>Drag</b> to move the canvas</li>
+            <li><b>Scroll/Pinch</b> to zoom</li>
+            <li>Press <b>Space</b> to lock movement</li>
+            <li>Press <b>0</b> to show coordinates</li>
+            <li><b>Click</b> to place a pixel</li>
+            <li>Press <b>h</b> to show this again!</li>
+            <p>Feel free to <a href="https://discord.gg/jeAYqyUWV6">join the discord</a>!</p>
+            <button onclick="document.getElementById(&#39;welcome&#39;).style.display = &#39;none&#39;">Close</button>
+        </center>
+    </div>
+    <div id="error">
+        <div id="error_content">
+            <center>
+                <h1>ERROR: SOCKET DISCONNECTED</h1>
+                <p>That's unfortunate. You can try to refresh the site by clicking <a href="https://place.bonziworld.org/">this link</a><br><br>
+                If that doesn't work, the site is broken.<br>
+                Report this to fune at funyfox1@gmail.com or fune720 on pisscord.</p>
+            </center>
+        </div>
+    </div>
+    <div id="lockdown">
+        <div id="lockdown_content">
+            <center>
+                <h1>SERVER LOCKDOWN</h1>
+                THERE IS A BOT ATTACK EMERGENCY! A BOT USING 20+ IPS IS BEING USED. THE SERVER IS LOCKED DOWN FOR 10 MINUTES.
+            </center>
+        </div>
+    </div>
+
+    <div id="colorsel">
+    <div class="selected coloropt" style="background-color:red;" onclick="sel(3, this)"></div>
+    <div class="coloropt" style="background-color: maroon;" onclick="sel(17, this)"></div>
+    <div class="coloropt" style="background-color:#F65E26;" onclick="sel(16, this)"></div>
+    <div class="coloropt" style="background-color:orange;" onclick="sel(4, this)"></div>
+    <div class="coloropt" style="background-color:yellow;" onclick="sel(5, this)"></div>
+    <div class="coloropt" style="background-color:lime;" onclick="sel(9, this)"></div>
+    <div class="coloropt" style="background-color:green;" onclick="sel(6, this)"></div>
+    <div class="coloropt" style="background-color:cyan;" onclick="sel(7, this)"></div>
+    <div class="coloropt" style="background-color:#3B9EF4;" onclick="sel(18, this)"></div>
+    <div class="coloropt" style="background-color:blue;" onclick="sel(8, this)"></div>
+    <div class="coloropt" style="background-color:#6500a8;" onclick="sel(10, this)"></div>
+    <div class="coloropt" style="background-color:#ff00f7;" onclick="sel(14, this)"></div>
+    <div class="coloropt" style="background-color:purple;" onclick="sel(11, this)"></div>
+    <div class="coloropt" style="background-color:#AB8266;" onclick="sel(15, this)"></div>
+    <div class="coloropt" style="background-color:#5E270B;" onclick="sel(12, this)"></div>
+    <div class="coloropt" style="background-color:white;" onclick="sel(0, this)"></div>
+    <div class="coloropt" style="background-color:grey;" onclick="sel(1, this)"></div>
+    <div class="coloropt" style="background-color:#282828;" onclick="sel(13, this)"></div>
+    <div class="coloropt" style="background-color:black;" onclick="sel(2, this)"></div>
+    </div>
+
+</body></html>

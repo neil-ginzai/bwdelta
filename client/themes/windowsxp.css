@@ -1,0 +1,70 @@
+#login{
+    background-color: #5673d9;
+}
+
+#top_bar, #bottom_bar{
+    background-color: #00249c;
+}
+#top_bar div{
+    background: linear-gradient(to right, #00249c, rgba(255, 255, 255, 0.85) 25%, rgba(0,0,0,0));
+}
+#bottom_bar{
+    background: linear-gradient(to right, #343aae, #002c9c);
+}
+#bottom_bar div{
+    background: linear-gradient(to right, #030a99, #ffb100 25%, rgba(0, 0, 0, 0))
+}
+
+#card_login{
+    background: linear-gradient(to right, #002aa9 0% 30%, #0070FF);
+}
+
+#readme_block{
+    color: #444444;
+}
+#login_button {
+    filter:hue-rotate(35deg) contrast(0.9) drop-shadow(2px 2px 0px rgba(0,0,0,0.3));
+}
+#content{
+    background-color: #1b3075;
+}
+
+/*CHATBAR*/
+#chatbar_cont{
+    background-color: #2464ac;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #1678d4, rgba(0,0,0,0) 20% 100%), linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(255, 255, 255, 0.05));
+}
+
+#chatbar{
+    position: absolute;
+    top: 3px;
+    font-size: 15px;
+    width: calc(100% - 132px);
+}
+#tile{
+    background-image: url(/img/tile.png), linear-gradient(to right, #2648ad, 7%, rgba(0,0,0,0) 12% 88%), linear-gradient(to bottom, #2648ad 7%, rgba(0,0,0,0) 12% 88%, #2648ad 93% 100%);
+    background-color: #3385f8;
+}
+
+#send_button {
+    background-image: url(../img/startxp.png);
+}
+#content {
+    background-image: url(../img/assets/bliss.jpg);
+    background-size: 100% 100%;
+}
+.log_close {
+    filter:hue-rotate(298deg);
+}
+#log_cont, .msWindow_cont{
+border: 1px solid #103075;
+background: 
+linear-gradient(180deg, rgba(0,0,0,0) 28px, rgba(0,0,0,0.25) 31px, rgba(0,0,0,0) 31px), 
+linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0,0,0,0) 5px), 
+linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.1) 31px), 
+linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(255, 255, 255, 0.05) 31px, rgba(0,0,0,0) 31.2px),
+ linear-gradient(180deg, #519fff 0px, #0e4acd 6px, #1554db 20px, #377ef8 32px, rgba(0,0,0,0) 32px), /* titlebar */
+ linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px),
+  linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px),
+   linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), #1956db;
+}

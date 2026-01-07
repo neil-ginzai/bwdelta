@@ -1,0 +1,52 @@
+#login{
+    background-color: #2b2b2b;
+}
+
+#top_bar, #bottom_bar{
+    background-color: #525252;
+}
+#top_bar div{
+    background: linear-gradient(to right, #707070, rgba(255, 255, 255, 0.85) 25%, rgba(0,0,0,0));
+}
+#bottom_bar{
+    background: linear-gradient(to right, #a3a3a3, #8a8a8a);
+}
+#bottom_bar div{
+    background: linear-gradient(to right, #6c657f, #edfb9d 25%, rgba(0,0,0,0));
+}
+
+#card_login{
+    background: linear-gradient(to right, #5a5a5a 0% 30%, #acacac);
+}
+
+#readme_block{
+    color: #444444;
+}
+
+#content{
+    background-color: #232323;
+}
+
+/*CHATBAR*/
+#chatbar_cont{
+    background-color: #4e4e4e;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #484848, rgba(0,0,0,0) 20% 100%), linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(255, 255, 255, 0.05));
+}
+
+#chatbar{
+    position: absolute;
+    top: 3px;
+    font-size: 15px;
+    width: calc(100% - 132px);
+}
+#tile{
+    background-image: url(/img/tile.png), linear-gradient(to right, #3f3f3f, 7%, rgba(0,0,0,0) 12% 88%), linear-gradient(to bottom, #9a9a9a 7%, rgba(0,0,0,0) 12% 88%, #bdbdbd 93% 100%);
+    background-color: #373737;
+}
+
+
+
+#log_cont, .msWindow_cont{
+border: 1px solid #2d2d2e;
+background: linear-gradient(180deg, rgba(0,0,0,0) 28px, rgba(0,0,0,0.25) 31px, rgba(0,0,0,0) 31px), linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0,0,0,0) 5px), linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.1) 31px), linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(255, 255, 255, 0.05) 31px, rgba(0,0,0,0) 31.2px), linear-gradient(180deg, #686f7d 0px, #3b3f49 32px, rgba(0,0,0,0) 32px), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), #50555f;
+}

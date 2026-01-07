@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/jpeg" href="./assets/icon.jpg">
+    <title>BonziWORLD</title>
+    <script src="./libs/socket.io.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/7eb4dccc86.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="login_bg" < div></div>
+    <div id="login">
+      <form id="login_form" action="javascript:">
+        <center>
+          <img src="./assets/login_pfp.png" id="login_pfp">
+          <h1>BonziWORLD!</h1>
+        </center>
+        <div id="input_wrapper">
+          <input placeholder="Nickname" id="login_nickname"><br>
+          <input placeholder="Room (optional)" id="login_room"><button id="login_submit"><i class="fa fa-arrow-right"></i></button>
+          <input type="submit" style="display:none;">
+        </div>
+        <center>
+          <div id="loading" style="display: none;">
+            <img src="./assets/loading.gif"><span>Welcome!</span>
+          </div>
+          <div id="error" style="display: none;">
+            <span id="login_error">Report this to Fune (fune720 discord or funyfox1@gmail.com)</span><br>
+            <button id="error_button">OK</button>
+          </div>
+        </center>
+        <div id="readme_block">
+          The worst place on the internet!<br><br>
+          <a href="https://bonziworld.org" target="_blank">Check out the REAL BonziWORLD</a> &nbsp; <a href="https://discord.gg/ZZsEVXbnUg" target="_blank">Join the Pisscord</a>
+        </div>
+      </form>
+
+      <div id="footer_right">
+        Version 0.3.0 BETA
+      </div>
+    </div>
+
+    <div id="content" style="display: none;">
+      <div id="chatbox">
+        <p class="message">Welcome to BonziWORLD!</p>
+      </div>
+      <div id="taskbar">
+        <button id="start" onclick="sidebaropen()"><i class="fa fa-users"></i></button>
+        <input id="send_message" placeholder="Enter a message">
+        <button id="send"><img src="./assets/send.png"></button>
+      </div>
+      <div id="sidebar" style="left: -300px;">
+        <div id="sidebar_head"><button id="sidebar_close" onclick="sidebarclose()"><i class="fa fa-arrow-left"></i></button><span id="user_count">??? Users</span></div>
+        <div id="sidebar_content">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

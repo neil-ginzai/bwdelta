@@ -1,0 +1,319 @@
+*{
+  font-family: "SegoeVariable", Arial;
+  outline: none;
+  color: #000000;
+}
+
+@font-face{
+  font-family: "SegoeVariable";
+  src: url("/SegUIVar.ttf");
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+/*Login*/
+#login_bg{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  filter: brightness(60%);
+  background: white;
+  background-size: cover;
+}
+#login_pfp{
+  width: 190px;
+}
+#login h1{
+  font-weight: bold;
+  font-size: 45px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#login_form{
+  position: fixed;
+  margin-bottom: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 400px;
+}
+
+#login_nickname, #login_room{
+  font-size: 17px;
+  font-weight: normal;
+  height: 36px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid grey;
+  color: white;
+  padding: 0px 9px;
+}
+#login_nickname{
+  margin-bottom: 10px;
+  width: 100%;
+}
+#login_room{
+  width: calc(100% - 36px);
+  border-right: none;
+  vertical-align: text-bottom
+}
+#login_submit, #error_button{
+    position: relative;
+    outline: none;
+}
+#login_submit{
+  height: 36px;
+  width: 36px;
+  vertical-align: text-bottom;
+  border: 2px solid grey;
+  border-left: none;
+  font-size: 20px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+#login_submit i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+#login_submit:hover{
+  background-color: rgba(158, 158, 158, 0.5);
+}
+
+
+#loading{
+  position: relative;
+  top: -20px;
+}
+#loading span{
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+  margin-left: 40px;
+}
+#loading img{
+  width: 30px;
+  float: left;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  filter: invert(1);
+  transform: translateY(70%);
+}
+
+#error_button{
+  padding: 7px 0px;
+  width: 100px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+  border: 2px solid white;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+#error_button:hover{
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+#login a{
+  color: white;
+}
+#login a:hover{
+  color: #aaaaaa;
+}
+
+#readme_block{
+  margin-top: 38px;
+  text-align: center;
+}
+#footer_right{
+  position: fixed;
+  bottom: 0;
+  padding: 5px 10px;
+  right: 0;
+}
+
+
+
+/*CHAT CONTENT*/
+#chatbox{
+  position: fixed;
+  width: 100%;
+  right: 0;
+  height: calc(100% - 40px);
+  padding-top: 5px;
+  overflow: scroll;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  transition: 0.1s;
+}
+#chatbox::-webkit-scrollbar{
+  width: 5px;
+  height: 100%;
+}
+#chatbox::-webkit-scrollbar-thumb{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#taskbar{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 40px;
+  background-color: #ffffff;
+}
+.message{
+  font-size: 20px;
+  padding: 10px;
+  margin: 0px;
+}
+.message:hover{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.usermedia{
+  height: 250px;
+  max-width: 50%;
+}
+
+/*Taskbar*/
+#taskbar button{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  border: none;
+}
+#taskbar button:hover{
+  background-color: #dddddd;
+}
+#taskbar button img, #taskbar button i{
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #b800ff;
+}
+#taskbar button img{
+  width: 30px;
+  height: 30px;
+}
+#taskbar input{
+  position: relative;
+  background-color: black;
+  left: 40px;
+  width: calc(100% - 80px);
+  height: 40px;
+  padding: 0px 10px;
+  font-size: 20px;
+  box-sizing: border-box;
+  border: 2px solid #363636;
+  color: #ffffff;
+}
+#send{
+  positon: fixed;
+  bottom: 0;
+  right: 0;
+}
+#taskbar #send img{
+  width: 40px;
+  height: 40px;
+}
+
+/*Sidebar*/
+#sidebar{
+  width: 300px;
+  max-width: 50%;
+  position: fixed;
+  height: calc(100% - 40px);
+  background-color: #ededed;
+  text-shadow: 0px 0px 5px black;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  transition: 0.1s;
+}
+#sidebar_head{
+  position: relative;
+  height: 35px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+  background-color: #ffffff;
+}
+#sidebar_head span{
+  position: absolute;
+  top: 50%;
+  text-shadow: 0px 0px 0px black;
+  color: #000000;
+  transform: translateY(-50%);
+}
+
+#sidebar_close{
+  float: left;
+  left: 0px;
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+  background-color: #20202000;
+  margin-right: 10px;
+  border: none;
+}
+#sidebar_close:hover{
+  background-color: #38383800;
+}
+#sidebar_content{
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  overflow: scroll;
+  word-wrap: break-word;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: calc(100% - 35px);
+}
+#sidebar_content::-webkit-scrollbar {
+  width: 5px;
+  height: 100%;
+}
+#sidebar_content::-webkit-scrollbar-thumb {
+  background: #555555;
+}
+#sidebar_content p{
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+}
+#sidebar_content p:hover{
+    background-color: #dadada;
+}
+
+/*
+Add that windows 10 blue bar on the left thing.
+#sidebar_content p:hover::before{
+}
+*/
+
+/*MOBILE*/
+@media screen and (max-width: 560px){
+  #login_form{
+    width: 80%;
+  }
+  #login_bg{
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
