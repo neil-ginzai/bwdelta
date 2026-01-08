@@ -1967,7 +1967,7 @@ async function clipboard(text) {
                 socket.emit("command", { command: "vote", param: "no" });
             };
             // play sound effect 
-            let sfx = new Audio("/xpballn.wav");
+            let sfx = new Audio("/sfx/xpballn.wav");
             sfx.volume = 0.5;
             sfx.play();
         });
