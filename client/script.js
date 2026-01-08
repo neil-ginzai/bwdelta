@@ -499,7 +499,7 @@ async function clipboard(text) {
                 <table>
                 <tr>
                 <td class="side">
-                <img src="./img/assets/bonzipc3.png">
+                <img src="./img/assets/settings.ico">
                 </td>
                 <td>
                 <span class="win_text">
