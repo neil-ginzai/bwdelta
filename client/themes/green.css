@@ -9,6 +9,11 @@
     background-image: url(/themes/greenclouds.png);
 }
 
+#banner {
+    background: rgb(108 254 113);
+    background: linear-gradient(0deg, rgb(108 254 120) 0%, rgb(51 226 71) 19%, rgb(106 193 37) 44%, rgb(34 175 44) 84%, rgb(62 201 62) 93%, rgb(166 255 103) 100%);
+}
+
 #top_bar, #bottom_bar{
     background-color: #008800;
 }
