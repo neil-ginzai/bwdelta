@@ -11,7 +11,7 @@
 }
 
 #content audio{
-  display: none;
+  display: block;
 }
 
 @font-face {
