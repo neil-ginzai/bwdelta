@@ -9,6 +9,11 @@
     background-image: url(/themes/blueclouds.png);
 }
 
+#banner {
+    background: rgb(108 133 254);
+    background: linear-gradient(0deg, rgb(111 108 254) 0%, rgb(51 90 226) 19%, rgb(37 83 193) 44%, rgb(34 76 175) 84%, rgb(62 93 201) 93%, rgb(103 106 255) 100%);
+}
+
 #top_bar, #bottom_bar{
     background-color: #00249c;
 }
