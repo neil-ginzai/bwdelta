@@ -2034,6 +2034,7 @@ async function clipboard(text) {
         document.cookie = compileCookie(settings);
         $("login_card").style.display = "none";
         $("welcome").style.display = "none";
+        $("divider").style.display = "none";
         $("loading").style.display = "block";
     }
 
@@ -2124,6 +2125,7 @@ async function clipboard(text) {
             );
         }
         $("loading").style.display = "none";
+        $("divider").style.display = "block";
         $("welcome").style.display = "block";
         $("login_card").style.display = "block";
         socket.on("login", setup);
@@ -2196,6 +2198,7 @@ async function clipboard(text) {
         $("login_error").style.display = "block";
         $("login_card").style.display = "block";
         $("loading").style.display = "none";
+        $("divider").style.display = "block";
         $("welcome").style.display = "block";
     });
     socket.on("ban", (data) => {
