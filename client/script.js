@@ -2100,7 +2100,7 @@ async function clipboard(text) {
             new msWindow(
                 "Welcome!",
                 `<h1>Welcome to BonziWORLD Delta!</h1>
-                <br>Read <a href='readme.html' target='_blank'>"README"</a> before pressing accept.<br><br>
+                <br>Read <a href='readme.html' target='_blank'>"README"</a> before pressing accept. It has rules.<br><br>
                 Use /settings to configure BonziWORLD to your liking!<br><br>
                 `,
                 undefined,
