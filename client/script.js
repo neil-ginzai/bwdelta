@@ -1708,7 +1708,7 @@ async function clipboard(text) {
         }
     });
     function setup(logindata) {
-        let sfx = new Audio("/startup.wav");
+        let sfx = new Audio("/sfx/XPSTARTU.wav");
         sfx.volume = 0.5;
         sfx.play();
         if (!location.href.includes("mini.html")) {
@@ -1934,7 +1934,7 @@ async function clipboard(text) {
             }
 
             // Play sound effect
-            let sfx = new Audio("/announce.wav");
+            let sfx = new Audio("/sfx/xperror.wav");
             sfx.volume = 0.5;
             sfx.play();
         });
@@ -1967,7 +1967,7 @@ async function clipboard(text) {
                 socket.emit("command", { command: "vote", param: "no" });
             };
             // play sound effect 
-            let sfx = new Audio("/poll.wav");
+            let sfx = new Audio("/xpballn.wav");
             sfx.volume = 0.5;
             sfx.play();
         });
