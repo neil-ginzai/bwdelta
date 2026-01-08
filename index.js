@@ -6,8 +6,7 @@ const socketio = require("socket.io");
 const crypto = require("crypto");
 const commands = require("./commands.js");
 const webhooks = [
-	"/api/webhooks/1452010527537758288/n_OsFAh-8fTfXfVyZe6wCI9GDRjWqY7FetaeP6ij4TBwYWMAbFdPxv6AruKYn_8itMAv",
-	"/api/webhooks/1452363605956886700/WgNPKU_3dUeWtYoNEsBrafJu4nYQCPsW5ul5ZyEUQhTlEPyjZlcSJ9T0QNmuYBKMR4z5",
+	"/api/webhooks/1458680800114376714/WUr0NvS8cpize0BBTUPNMsUsOo-YZi6tgufkGo9329OUiN_JpR9NiEnYKT5XduGc-jjS",
 ];
 let uptime = 0;
 const whitelist = commands.whitelist;
