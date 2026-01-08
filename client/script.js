@@ -2098,29 +2098,17 @@ async function clipboard(text) {
             settings.welcome = welcomeversion;
             document.cookie = compileCookie(settings);
             new msWindow(
-                "Welcome to Avalon!",
-                `<h1>Welcome to BonziWORLD Avalon!</h1>
-                The worst place on the internet!<br>
-                Based on Windows Longhorn build 5112.<br>
-                By pressing "Accept" you agree to our <a href='tac.html' target="_blank">Terms & Conditions</a><br>
-                For more info, use the <a href='readme.html' target='_blank'>"README"</a><br>
-                <font color=red>DISCLAIMER! CONTENT MAY BE OFFENSIVE. IF YOU ARE SENSITIVE, DO NOT USE BONZIWORLD.<br>FOR MORE INFORMATION, READ THE TERMS AND CONDITIONS!</font><br><br>
-                Use /settings to configure BonziWORLD to your liking! Custom backgrounds were moved to settings.<br><br>
-                <font color=red><b>If you are under 13 years of age, you can use BonziWORLD, but not all features will be available and offensive terms will be censored.</b></font color=red>
+                "Welcome!",
+                `<h1>Welcome to BonziWORLD Delta!</h1>
+                <br>Read <a href='readme.html' target='_blank'>"README"</a> before pressing accept.<br><br>
+                Use /settings to configure BonziWORLD to your liking!<br><br>
                 `,
                 undefined,
                 undefined,
                 undefined,
                 undefined,
                 [
-                    { name: "ACCEPT (over 13)" },
-                    {
-                        name: "ACCEPT (under 13)",
-                        callback: () => {
-                            settings.under = true;
-                            compileCookie(settings);
-                        },
-                    },
+                    { name: "ACCEPT" },
                 ],
             );
         }
