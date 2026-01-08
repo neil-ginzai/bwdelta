@@ -489,7 +489,6 @@ async function clipboard(text) {
                 `
                 <datalist id="themes">
                     <option value="black">
-                    <option value="purple">
                     <option value="blue">
                     <option value="green">
                     <option value="purple">
