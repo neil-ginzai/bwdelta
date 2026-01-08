@@ -488,12 +488,14 @@ async function clipboard(text) {
                 "Settings",
                 `
                 <datalist id="themes">
-                    <option value="5270">
+                    <option value="black">
                     <option value="purple">
-                    <option value="5259">
-                    <option value="5060">
-                    <option value="dceglass">
-                    <option value="dcemetal">
+                    <option value="blue">
+                    <option value="green">
+                    <option value="purple">
+                    <option value="red">
+                    <option value="windowsxp">
+                    <option value="yellow">
                 </datalist>
   
                 <table>
@@ -2322,7 +2324,7 @@ async function clipboard(text) {
     }
 
     function changeSettings(crosscolors, bg, autojoin, name, theme, color) {
-        var colorse = ["red", "green", "blue", "5259", "5270", "purple", "5060", "dceglass", "dcemetal", "black", "windowsxp", ];
+        var colorse = ["red", "green", "blue", "purple", "black", "yellow", "windowsxp", ];
         if (colorse.includes(theme)) theme = "/themes/" + theme + ".css";
 
         //This function will do stuff soon!
