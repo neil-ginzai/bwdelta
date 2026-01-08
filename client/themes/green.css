@@ -2,6 +2,13 @@
     background-color: #50a839;
 }
 
+#blur{
+    width: 250px;
+    height: 250px;
+    background-size: 100%;
+    background-image: url(/themes/greenclouds.png);
+}
+
 #top_bar, #bottom_bar{
     background-color: #008800;
 }
