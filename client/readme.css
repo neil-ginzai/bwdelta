@@ -10,6 +10,10 @@
   border: 1px solid black;
 }
 
+#content audio{
+  display: none;
+}
+
 @font-face {
   font-family: Segoe7;
   src: url("https://files.catbox.moe/7yqelg.ttf");
