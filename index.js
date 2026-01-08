@@ -327,7 +327,7 @@ class user {
 		if (this.loggedin) return;
 		//Data validation and sanitization
 		if (ipinfo[this.socket.ip].clientslowmode) {
-			this.socket.emit("error", "Please wait 10 seconds before joining again.");
+			this.socket.emit("error", "YOU ARE JOINING TOO FAST!");
 			return;
 		} else if (logindata.color == undefined) logindata.color = "";
 		if (
@@ -348,7 +348,7 @@ class user {
 		if (logindata.room == "desanitize") this.sanitize = false;
 		logindata.name = sanitize(logindata.name);
 		if (logindata.name.length > config.maxname) {
-			this.socket.emit("error", "Name too long. Change your name.");
+			this.socket.emit("error", "ERROR: Change your name. Your name is too long.");
 			return;
 		}
 		logindata.name = markUpName(logindata.name);
