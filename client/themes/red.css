@@ -9,6 +9,11 @@
     background-image: url(/themes/redclouds.png);
 }
 
+#banner {
+    background: rgb(254 108 108);
+    background: linear-gradient(0deg, rgb(254 108 108) 0%, rgb(226 51 51) 19%, rgb(193 37 37) 44%, rgb(175 34 34) 84%, rgb(201 62 62) 93%, rgb(255 103 103) 100%);
+}
+
 #top_bar, #bottom_bar{
     background-color: #9c0000;
 }
