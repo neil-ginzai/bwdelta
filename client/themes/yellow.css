@@ -9,6 +9,11 @@
     background-image: url(/themes/yellowclouds.png);
 }
 
+#banner {
+    background: rgb(254 253 108);
+    background: linear-gradient(0deg, rgb(254 251 108) 0%, rgb(226 215 51) 19%, rgb(193 177 37) 44%, rgb(175 164 34) 84%, rgb(201 194 62) 93%, rgb(255 241 103) 100%);
+}
+
 #top_bar, #bottom_bar{
     background-color: #9c7f00;
 }
