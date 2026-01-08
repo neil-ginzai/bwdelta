@@ -339,7 +339,7 @@ The Main UI is much simpler
     display: inline-block;
     width: 100px;
     height: 32px;
-    background-image: url(./img/start.png);
+    background-image: url(./img/startwhistler.png);
 }
 #send_button:hover{
     background-position: 0px -33px;
@@ -357,7 +357,6 @@ The Main UI is much simpler
     font-weight: bold;
     color: white;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.75);
 }
 #chatbar{
     position: absolute;
