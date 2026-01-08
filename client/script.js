@@ -1708,7 +1708,7 @@ async function clipboard(text) {
         }
     });
     function setup(logindata) {
-        let sfx = new Audio("/sfx/XPSTARTU.wav");
+        let sfx = new Audio("/sfx/XPSTARTU2.wav");
         sfx.volume = 0.5;
         sfx.play();
         if (!location.href.includes("mini.html")) {
