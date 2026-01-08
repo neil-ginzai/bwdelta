@@ -9,6 +9,11 @@
     background-image: url(/themes/blackclouds.png);
 }
 
+#banner {
+    background: rgb(87 87 87);
+    background: linear-gradient(0deg, rgb(132 132 132) 0%, rgb(88 97 105) 19%, rgb(73 80 90) 44%, rgb(78 87 99) 84%, rgb(99 106 114) 93%, rgb(132 132 132) 100%);
+}
+
 #top_bar, #bottom_bar{
     background-color: #525252;
 }
