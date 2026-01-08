@@ -114,6 +114,7 @@ img{
     height: 250px;
     background-size: 100%;
     background-image: url(/themes/purpleclouds.png);
+    z-index: -50000;
 }
 #logotopbar{
     position: absolute;
