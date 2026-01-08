@@ -1,5 +1,12 @@
 #login{
-    background-color: #0070FF;
+    background-color: #0071FF;
+}
+
+#blur{
+    width: 250px;
+    height: 250px;
+    background-size: 100%;
+    background-image: url(/themes/blueclouds.png);
 }
 
 #top_bar, #bottom_bar{
@@ -16,7 +23,7 @@
 }
 
 #card_login{
-    background: linear-gradient(to right, #002aa9 0% 30%, #0070FF);
+    background: linear-gradient(to right, #002aa9 0% 30%, #0071FF);
 }
 
 #readme_block{
