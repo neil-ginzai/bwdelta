@@ -3,8 +3,35 @@
     src: url("./Tahoma.woff");
 }
 @font-face{
+    font-family: "Comic Sans MS";
+    src: url("./comic.ttf");
+}
+@font-face{
     font-family: "XP_Tahoma";
     src: url("./windows-xp-tahoma.woff");
+}
+
+@keyframes move {
+    from {
+        background-position-x: 500px;
+    }
+    to {
+        background-position-x: 0;
+    }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* End at 360 degrees (one full turn) */
+  }
+}
+
+.spin{
+    animation: spin 2s linear infinite;
+    display: inline-block;
 }
 
 @keyframes rainbow{
