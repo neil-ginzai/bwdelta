@@ -62,7 +62,7 @@
     background-image: url(../img/startwhistlerxp.png);
 }
 #content {
-    background-image: url(../img/assets/bliss.jpg);
+    background-image: url(../img/assets/redmoon.jpg);
     background-size: 100% 100%;
 }
 .log_close {
@@ -80,6 +80,7 @@ linear-gradient(180deg, rgba(0,0,0,0) 0px, rgba(255, 255, 255, 0.05) 31px, rgba(
   linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px),
    linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0px, rgba(0,0,0,0) 4px), #1956db;
 }
+
 
 
 
