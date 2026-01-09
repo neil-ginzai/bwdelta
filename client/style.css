@@ -34,6 +34,82 @@
     display: inline-block;
 }
 
+.bgay-rainbow {
+    background-image: linear-gradient(120deg in hsl longer hue, red, red, red);
+    background-size: 500px;
+    background-clip: text;
+    display: inline-block;
+    color: transparent;
+    animation: move 2s linear infinite;
+}
+
+.code {
+    border: 1px solid #bbb;
+    background-color: #ddd;
+    border-radius: 4px;
+    font: monospace;
+    padding: 0 0.2em;
+}
+
+.explosion {
+    width: 71px;
+    height: 101px;
+    position: fixed;
+    background: url("./img/misc/explosion.png");
+    animation: 1s explosion steps(17) 1 forwards;
+    transform: translate(65px, 30px) scale(2);
+    image-rendering: pixelated;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+@keyframes explosion {
+    100% { background-position: -1207px; }
+}
+
+.fliph{
+    display: inline-block; /* Required for the transform to apply correctly */
+    transform: scaleX(-1);
+}
+
+.comicsans{
+    font-family: "Comic Sans MS";
+}
+.raging{
+    display: inline-block; /* Required for the transform to apply correctly */
+    animation: shaking 0.6s infinite ease-in-out;
+    color: red;
+}
+
+.invis{
+    display: inline-block; /* Required for the transform to apply correctly */
+    color: transparent;
+}
+
+.quake{
+    display: inline-block; /* Required for the transform to apply correctly */
+    animation: shaking 0.6s infinite ease-in-out;
+}
+
+.flipv{
+    display: inline-block; /* Required for the transform to apply correctly */
+    transform: scaleY(-1);
+}
+
+@keyframes shaking {
+      0%   { transform: translate(-5px, 5px) rotate(-1deg); }
+      10%  { transform: translate(5px, -5px) rotate(0deg); }
+      20%  { transform: translate(-5px, 5px) rotate(-2deg); }
+      30%  { transform: translate(5px, -5px) rotate(5deg); }
+      40%  { transform: translate(-5px, 5px) rotate(-4deg); }
+      50%  { transform: translate(5px, -5px) rotate(3deg); }
+      60%  { transform: translate(-5px, 5px) rotate(-1deg); }
+      70%  { transform: translate(5px, -5px) rotate(0deg); }
+      80%  { transform: translate(-5px, 5px) rotate(0deg); }
+      90%  { transform: translate(5px, -5px) rotate(10deg); }
+      100% { transform: translate(-5px, 5px) rotate(-5deg); }
+    }
+
 @keyframes rainbow{
     0%{color: red;}
     16%{color: orange;}
@@ -42,6 +118,20 @@
     64%{color: cyan;}
     80%{color: blue;}
     90%{color: #FF00FF;}
+    100%{color: red;}
+}
+
+@keyframes rainbowreadme {
+  from{filter:hue-rotate(0deg)}
+  to{filter:hue-rotate(360deg)}
+}
+
+@keyframes redyellow{
+    0%{color: red;}
+    20%{color: orange;}
+    40%{color: yellow;}
+    60%{color: yellow;}
+    80%{color: orange;}
     100%{color: red;}
 }
 
