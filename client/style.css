@@ -47,7 +47,7 @@
     border: 1px solid #bbb;
     background-color: #ddd;
     border-radius: 4px;
-    font: monospace;
+    font-family: monospace;
     padding: 0 0.2em;
 }
 
