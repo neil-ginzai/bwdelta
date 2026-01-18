@@ -211,6 +211,7 @@ async function clipboard(text) {
     };
     const colors = [
         "gold",
+        "invertedmonochrome",
         "purple",
         "blessed",
         "yellow",
