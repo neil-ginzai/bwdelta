@@ -54,6 +54,7 @@
 		"rotbrain": 1,
 		"useredit": 1,
 		"statlock": 1,
+		"invertmc": 0.1,
 		"announce": 0.1,
 		"poll": 0.1,
 		"gold": 0.1,
