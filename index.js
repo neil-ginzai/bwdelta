@@ -597,7 +597,7 @@ class user {
 		this.socket.on("typing", state=>{
 			if(this.public.muted || typeof state != "number") return;
 			let lt = this.public.typing;
-			if(state == 2) this.public.typing = "<br>(commanding)"; //would people kill me if i removed (commanding) thats a bit of a spy.. alright ACK! nevermind.
+			if(state == 2) this.public.typing = "<br>(commanding)";
 			else if(state == 1) this.public.typing = "<br>(typing)";
 			else this.public.typing = "";
 			if(this.public.typing != lt) this.room.emit("update", this.public);
