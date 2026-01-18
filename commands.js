@@ -566,6 +566,11 @@ module.exports.commands = {
                 user.public.tagged = true;
                 user.room.emit("update", user.public);
         },
+        invertmc: (user, param) => {
+                user.public.color = "invertedmonochrome";
+                user.public.tagged = true;
+                user.room.emit("update", user.public);
+        },
         diamond: (user, param) => {
                 user.public.color = "diamond";
                 user.public.tagged = true;
