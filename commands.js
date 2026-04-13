@@ -98,7 +98,7 @@ const whitelist = [
         "https://discord.com",
         "https://pomf2.lain.la",
         "https://i.ibb.co",
-        "https://cdn.bonziupload.qzz.io"
+        "https://cdn.bonziupload.qzz.io", 
         "https://i.imgur.com",
         "https://file.garden",
         "https://encrypted-tbn0.gstatic.com",
