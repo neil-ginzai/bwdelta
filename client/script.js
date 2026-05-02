@@ -747,6 +747,29 @@ async function clipboard(text) {
         });
         return nmsg.join(" ");
     }
+// Word Filter Logic
+function applyWordFilter(msg) {
+    // 1. Create a "clean" version by removing all HTML tags 
+    // to prevent bypasses like h<b></b>ello
+    let doc = new HTMLParser().parseFromString(msg, 'text/html');
+    let cleanText = doc.body.textContent || "";
+
+    // 2. Define your filter rules
+    const filters = [
+        { find: /yay haha/gi, replace: "Congratulations" },
+        { find: /doctos/gi, replace: "not great" }, 
+        { find: /nigger/gi, replace: "fine sir" },
+        { find: /nigga/gi, replace: "friend" }
+    ];
+
+    // 3. Apply replacements to the clean text
+    let filteredMsg = cleanText;
+    filters.forEach(f => {
+        filteredMsg = filteredMsg.replace(f.find, f.replace);
+    });
+
+    return filteredMsg;
+}
 
     class agent {
         constructor(x, y, upub) {
