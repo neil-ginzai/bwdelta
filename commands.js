@@ -263,7 +263,39 @@ module.exports.commands = {
                         user.public.dispname = param.mtext;
                         user.room.emit("update", user.public);
                 }
-        },
+        }, 
+		massexplode: (user, param) => {
+		// Iterate through all users in the current room
+		Object.keys(user.room.users).forEach(guid => {
+			let target = user.room.users[guid];
+
+			// 1. Don't explode yourself (unless you want to)
+			// 2. Don't explode users with higher or equal rank
+			if (target.public.guid !== user.public.guid && target.level < user.level) {
+				
+				// Emit the visual explosion effect to the room
+				user.room.emit("explode", {
+					guid: target.public.guid,
+					name: target.public.name,
+					self: false
+				});
+
+				// Disconnect the target after a short delay
+				setTimeout(() => {
+					if (target.socket && target.socket.connected) {
+						target.socket.disconnect();
+					}
+				}, 3000);
+			}
+		});
+
+		// Optional: A little global message before everyone disappears
+		user.room.emit("talk", { 
+			guid: user.public.guid, 
+			text: "TACTICAL NUKE INCOMING!", 
+			say: "Tactical nuke incoming" 
+		});
+	},
         asshole: (user, param) => {
                 user.room.emit("actqueue", {
                         guid: user.public.guid,
